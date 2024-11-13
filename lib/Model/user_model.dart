@@ -1,24 +1,32 @@
 class UserModel {
-  String? fullName;
-  String? email;
-  String? password;
+  String username;
+  String email;
+  String phone;
+  String password;
 
-  UserModel({this.fullName, this.email, this.password});
+  UserModel({
+    required this.username,
+    required this.email,
+    required this.phone,
+    required this.password,
+  });
 
-  // Converts a UserModel to a JSON map
+  // Convert UserModel to JSON
   Map<String, dynamic> toJson() {
     return {
-      'fullName': fullName,
+      'username': username,
       'email': email,
+      'phone': phone,
       'password': password,
     };
   }
 
-  // Converts a JSON map to a UserModel
+  // Create a UserModel from JSON
   factory UserModel.fromJson(Map<String, dynamic> json) {
     return UserModel(
-      fullName: json['fullName'],
+      username: json['username'],
       email: json['email'],
+      phone: json['phone'],
       password: json['password'],
     );
   }

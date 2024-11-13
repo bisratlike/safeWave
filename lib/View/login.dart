@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/auth_controller.dart';
@@ -40,9 +38,7 @@ class LoginView extends StatelessWidget {
                   ),
                 ),
               ),
-
               SizedBox(height: 30),
-
               // Email field
               TextField(
                 controller: emailController,
@@ -53,7 +49,6 @@ class LoginView extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-
               // Password field
               TextField(
                 controller: passwordController,
@@ -65,7 +60,6 @@ class LoginView extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-
               // Login button
               Obx(() => ElevatedButton(
                     onPressed: authController.isLoading.value
@@ -87,11 +81,9 @@ class LoginView extends StatelessWidget {
                     child: authController.isLoading.value
                         ? CircularProgressIndicator(color: Colors.white)
                         : Text('Login',
-                            style:
-                                TextStyle(fontSize: 16, color: Colors.white)),
+                            style: TextStyle(fontSize: 16, color: Colors.white)),
                   )),
               SizedBox(height: 20),
-
               // Forgot password link
               GestureDetector(
                 onTap: () {
@@ -103,7 +95,6 @@ class LoginView extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-
               // Don't have an account? Sign up link
               GestureDetector(
                 onTap: () {
