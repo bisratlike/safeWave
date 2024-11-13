@@ -5,10 +5,11 @@ const errorHandler = require('./middlewares/error_handler');
 const locationRoutes = require('./routes/location_route');
 const userRoutes = require("./routes/user_route")
 const contactRoutes = require("./routes/contact_route")
+const cors = require("cors")
 dotenv.config();
 const app = express();
 app.use(express.json());
-
+app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 const url = process.env.url
 const port = process.env.port
