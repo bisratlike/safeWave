@@ -1,8 +1,8 @@
-#Wed Nov 13 13:54:38 MSK 2024
-base.0=C\:\\Users\\HP\\OneDrive\\Desktop\\SafeWave\\safe_wave\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\HP\\OneDrive\\Desktop\\SafeWave\\safe_wave\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Users\\HP\\OneDrive\\Desktop\\SafeWave\\safe_wave\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
-base.3=C\:\\Users\\HP\\OneDrive\\Desktop\\SafeWave\\safe_wave\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
+#Wed Nov 13 16:46:28 MSK 2024
+base.0=C\:\\Users\\HP\\OneDrive\\Desktop\\Hackathon\\safeWave\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\HP\\OneDrive\\Desktop\\Hackathon\\safeWave\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\HP\\OneDrive\\Desktop\\Hackathon\\safeWave\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
+base.3=C\:\\Users\\HP\\OneDrive\\Desktop\\Hackathon\\safeWave\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=1/classes.dex

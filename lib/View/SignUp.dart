@@ -103,14 +103,21 @@ class SignUpView extends StatelessWidget {
                           },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blueAccent,
-                      padding: EdgeInsets.symmetric(vertical: 15),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 15, horizontal: 15),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
                     child: authController.isLoading.value
                         ? CircularProgressIndicator(color: Colors.white)
+<<<<<<< HEAD
                         : Text('Sign Up', style: TextStyle(fontSize: 16, color: Colors.white)),
+=======
+                        : Text('Sign Up',
+                            style:
+                                TextStyle(fontSize: 16, color: Colors.white)),
+>>>>>>> cc12cc276f6ef30e561e18ff3954ab47d38faf35
                   )),
               SizedBox(height: 20),
 

@@ -18,11 +18,38 @@ class AuthController extends GetxController {
     print('Response status: ${response.statusCode}');
     print('Response body: ${response.body}'); // Log for debugging
 
+<<<<<<< HEAD
     if (response.statusCode == 200) {
       var data = json.decode(response.body);
       if (data['success']) {
         Get.snackbar("Success", "Sign up successful!", snackPosition: SnackPosition.BOTTOM);
         Get.toNamed('/login');
+=======
+      // Assuming successful sign-up
+      user.value = userModel;
+      Get.snackbar("Success", "User signed up successfully!");
+      Get.offNamed('/checkin');
+    } catch (e) {
+      print("Sign-up Error: $e");
+      Get.snackbar("Error", "Something went wrong during sign up.");
+    } finally {
+      isLoading(false);
+    }
+  }
+
+  // Login logic
+  Future<void> login(String email, String password) async {
+    isLoading(true);
+    try {
+      // Simulate API call for login (you'd typically authenticate with a backend here)
+      await Future.delayed(Duration(seconds: 2));
+
+      // Mock response: if email is 'user@example.com' and password is 'password'
+      if (email == 'user@example.com' && password == 'password') {
+        // On success, you could store authentication tokens here
+        Get.snackbar("Success", "Logged in successfully!");
+        Get.offNamed('/checkin');
+>>>>>>> cc12cc276f6ef30e561e18ff3954ab47d38faf35
       } else {
         Get.snackbar("Error", data['message'], snackPosition: SnackPosition.BOTTOM);
       }
@@ -57,6 +84,10 @@ class AuthController extends GetxController {
       } else {
         Get.snackbar("Error", data['message'], snackPosition: SnackPosition.BOTTOM);
       }
+<<<<<<< HEAD
+=======
+      
+>>>>>>> cc12cc276f6ef30e561e18ff3954ab47d38faf35
     } catch (e) {
       Get.snackbar("Error", "Login failed. Please try again.", snackPosition: SnackPosition.BOTTOM);
       print("Error during login: $e");
