@@ -1,0 +1,1 @@
+ C:\\Users\\HP\\OneDrive\\Desktop\\SafeWave\\safe_wave\\.dart_tool\\flutter_build\\0c95e083c1c0ad9de7e52e3a88a6c53b\\native_assets.yaml: 
