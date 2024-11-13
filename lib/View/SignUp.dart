@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/auth_controller.dart';
@@ -7,8 +5,9 @@ import '../Model/user_model.dart';
 
 class SignUpView extends StatelessWidget {
   final AuthController authController = Get.put(AuthController());
-  final TextEditingController fullNameController = TextEditingController();
+  final TextEditingController usernameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
   @override
@@ -17,7 +16,7 @@ class SignUpView extends StatelessWidget {
       appBar: AppBar(
         title: Text('Sign Up'),
         centerTitle: true,
-        backgroundColor:const Color.fromARGB(255, 233, 153, 180),
+        backgroundColor: const Color.fromARGB(255, 233, 153, 180),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -25,7 +24,7 @@ class SignUpView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-             Container(
+              Container(
                 height: 100,
                 width: 100,
                 decoration: BoxDecoration(
@@ -35,7 +34,7 @@ class SignUpView extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10),
                   child: Image.asset(
-                    'assets/images/logo.png',
+                    'assets/images/logo.png', // Add your logo here
                     fit: BoxFit.cover,
                     width: 100,
                     height: 100,
@@ -44,11 +43,11 @@ class SignUpView extends StatelessWidget {
               ),
               SizedBox(height: 30),
 
-              // Full Name field
+              // Username field
               TextField(
-                controller: fullNameController,
+                controller: usernameController,
                 decoration: InputDecoration(
-                  labelText: 'Full Name',
+                  labelText: 'Username',
                   prefixIcon: Icon(Icons.person),
                   border: OutlineInputBorder(),
                 ),
@@ -61,6 +60,17 @@ class SignUpView extends StatelessWidget {
                 decoration: InputDecoration(
                   labelText: 'Email',
                   prefixIcon: Icon(Icons.email),
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              SizedBox(height: 20),
+
+              // Phone field
+              TextField(
+                controller: phoneController,
+                decoration: InputDecoration(
+                  labelText: 'Phone Number',
+                  prefixIcon: Icon(Icons.phone),
                   border: OutlineInputBorder(),
                 ),
               ),
@@ -84,8 +94,9 @@ class SignUpView extends StatelessWidget {
                         ? null
                         : () {
                             UserModel user = UserModel(
-                              fullName: fullNameController.text,
+                              username: usernameController.text,
                               email: emailController.text,
+                              phone: phoneController.text,
                               password: passwordController.text,
                             );
                             authController.signUp(user);
@@ -99,14 +110,14 @@ class SignUpView extends StatelessWidget {
                     ),
                     child: authController.isLoading.value
                         ? CircularProgressIndicator(color: Colors.white)
-                        : Text('Sign Up', style: TextStyle(fontSize: 16,color: Colors.white)),
+                        : Text('Sign Up', style: TextStyle(fontSize: 16, color: Colors.white)),
                   )),
               SizedBox(height: 20),
 
               // Already have an account? Login link
               GestureDetector(
                 onTap: () {
-                  Get.toNamed('/login');
+                  Get.toNamed('/login'); // Navigate to login page
                 },
                 child: Text(
                   'Already have an account? Log in',
