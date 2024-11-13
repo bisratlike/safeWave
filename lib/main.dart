@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:safe_wave/Controllers/Emergency_Controller.dart';
+import 'package:safe_wave/Controllers/check_in_controller.dart';
 import 'package:safe_wave/View/EmergencyView.dart';
 import 'package:safe_wave/View/ForgotPassword.dart';
 import 'package:safe_wave/View/SignUp.dart';
@@ -8,6 +10,8 @@ import 'package:safe_wave/View/login.dart';
 import 'View/home_view.dart';
 
 void main() {
+  Get.put(CheckInController());
+  Get.put(EmergencyController());
   runApp(SafeWaveApp());
 }
 

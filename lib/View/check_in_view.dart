@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import '../controllers/check_in_controller.dart';
 
 class CheckInView extends StatelessWidget {
-  final CheckInController checkInController = Get.put(CheckInController());
+  final CheckInController checkInController = Get.find<CheckInController>();
 
   @override
   Widget build(BuildContext context) {

@@ -21,7 +21,6 @@ class ForgotPasswordView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // Logo placeholder
               Container(
                 height: 100,
                 width: 100,
@@ -29,10 +28,13 @@ class ForgotPasswordView extends StatelessWidget {
                   color: Colors.grey[300],
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Center(
-                  child: Text(
-                    'Logo',
-                    style: TextStyle(fontSize: 20, color: Colors.white),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    fit: BoxFit.cover,
+                    width: 100,
+                    height: 100,
                   ),
                 ),
               ),
@@ -61,12 +63,13 @@ class ForgotPasswordView extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blueAccent,
-                  padding: EdgeInsets.symmetric(vertical: 15),
+                  padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
-                child: Text('Reset Password', style: TextStyle(fontSize: 16)),
+                child: Text('Reset Password',
+                    style: TextStyle(fontSize: 16, color: Colors.white)),
               ),
             ],
           ),

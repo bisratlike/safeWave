@@ -7,9 +7,9 @@ import '../controllers/check_in_controller.dart';
 
 
 class EmergencyView extends StatelessWidget {
-  final EmergencyController emergencyController =
-      Get.put(EmergencyController());
-  final CheckInController checkInController = Get.put(CheckInController());
+final EmergencyController emergencyController = Get.find<EmergencyController>();
+final CheckInController checkInController = Get.find<CheckInController>();
+
 
   @override
   Widget build(BuildContext context) {

@@ -17,7 +17,7 @@ class SignUpView extends StatelessWidget {
       appBar: AppBar(
         title: Text('Sign Up'),
         centerTitle: true,
-        backgroundColor:const Color.fromARGB(255, 233, 153, 180),
+        backgroundColor: const Color.fromARGB(255, 233, 153, 180),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -25,7 +25,7 @@ class SignUpView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-             Container(
+              Container(
                 height: 100,
                 width: 100,
                 decoration: BoxDecoration(
@@ -92,14 +92,17 @@ class SignUpView extends StatelessWidget {
                           },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blueAccent,
-                      padding: EdgeInsets.symmetric(vertical: 15),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 15, horizontal: 15),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
                     child: authController.isLoading.value
                         ? CircularProgressIndicator(color: Colors.white)
-                        : Text('Sign Up', style: TextStyle(fontSize: 16,color: Colors.white)),
+                        : Text('Sign Up',
+                            style:
+                                TextStyle(fontSize: 16, color: Colors.white)),
                   )),
               SizedBox(height: 20),
 
