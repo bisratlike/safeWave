@@ -8,10 +8,10 @@ import 'package:safe_wave/View/login.dart';
 import 'View/home_view.dart';
 
 void main() {
-  runApp(SafetyGuardApp());
+  runApp(SafeWaveApp());
 }
 
-class SafetyGuardApp extends StatelessWidget {
+class SafeWaveApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
