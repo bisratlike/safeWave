@@ -2,14 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../controllers/Emergency_Controller.dart';
-import '../controllers/check_in_controller.dart';
-
+import '../Controllers/Emergency_Controller.dart';
+import '../Controllers/check_in_controller.dart';
 
 class EmergencyView extends StatelessWidget {
-final EmergencyController emergencyController = Get.find<EmergencyController>();
-final CheckInController checkInController = Get.find<CheckInController>();
-
+  final EmergencyController emergencyController =
+      Get.find<EmergencyController>();
+  final CheckInController checkInController = Get.find<CheckInController>();
 
   @override
   Widget build(BuildContext context) {

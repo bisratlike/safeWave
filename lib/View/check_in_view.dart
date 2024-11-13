@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../controllers/check_in_controller.dart';
+import '../Controllers/check_in_controller.dart';
 
 class CheckInView extends StatelessWidget {
   final CheckInController checkInController = Get.find<CheckInController>();
