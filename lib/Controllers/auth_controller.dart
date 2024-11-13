@@ -40,10 +40,11 @@ class AuthController extends GetxController {
       if (email == 'user@example.com' && password == 'password') {
         // On success, you could store authentication tokens here
         Get.snackbar("Success", "Logged in successfully!");
+        Get.offNamed('/checkin');
       } else {
         Get.snackbar("Error", "Invalid email or password.");
       }
-      Get.offNamed('/checkin');
+      
     } catch (e) {
       print("Login Error: $e");
       Get.snackbar("Error", "Login failed.");
